@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>VOLT</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="app__header">
+        <div>
+          <h1>VOLT</h1>
+          <p>Prototype architecture preview</p>
+        </div>
+        <div class="app__controls">
+          <button id="togglePause" type="button">Pause</button>
+          <button id="toggleMap" type="button">World Map</button>
+          <button id="toggleSettings" type="button">Settings</button>
+        </div>
+      </header>
+      <main class="app__main">
+        <canvas id="gameCanvas" width="640" height="360" aria-label="VOLT game canvas"></canvas>
+        <section class="panel" id="hudPanel">
+          <div class="hud__row">
+            <span>Energy</span>
+            <div class="meter">
+              <div class="meter__fill" id="energyFill"></div>
+            </div>
+          </div>
+          <div class="hud__row">
+            <span>XP</span>
+            <div class="meter meter--xp">
+              <div class="meter__fill meter__fill--xp" id="xpFill"></div>
+            </div>
+          </div>
+          <div class="hud__stats" id="hudStats"></div>
+        </section>
+      </main>
+      <aside class="panel" id="overlayPanel" hidden></aside>
+    </div>
+    <script src="js/bundle.js" defer></script>
+  </body>
+</html>
